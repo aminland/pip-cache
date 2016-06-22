@@ -88,7 +88,7 @@ def main():
 
     parser_pkgnames = subparsers.add_parser('pkgnames', \
             help='List packages whose names start with a prefix')
-    parser_pkgnames.add_argument('prefix', type=str, help='Optional prefix.', \
+    parser_pkgnames.add_argument('prefix', nargs="?", type=str, help='Optional prefix.', \
             default='')
     parser_pkgnames.set_defaults(func=pkgnames)
     #args = parser.parse_args(['pkgnames', 'test'])
